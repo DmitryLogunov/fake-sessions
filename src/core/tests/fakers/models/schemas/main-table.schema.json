@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "attributes": ["info", "created_at", "created_by", "updated_at", "updated_by"],
+  "relationships": {
+    "relationships_first_id": { "resource": "resource_first", "type": "test-type", "offset": 10000 },
+    "relationships_second_id": { "resource": "resource_second", "type": "test-type", "offset": 20000 }
+  },
+  "required": ["id", "info"],  
+  "properties": {
+    "id": { 
+        "type": "number",
+        "primary": true 
+    },   
+    "info" : { 
+        "type": "string" 
+    },
+    "created_at": {
+      "type": "string",
+      "alias": {
+        "fieldName": "create_start_date"
+      }
+    },
+    "created_by": {
+      "type": "string"
+    },
+    "updated_at": {
+      "type": "string"
+    },
+    "updated_by": {
+      "type": "string"
+    },
+    "relationships_first_id": {
+      "type": ["string", "integer"]
+    },
+    "relationships_second_id": {
+      "type": ["string", "integer"]
+    }
+  }
+}

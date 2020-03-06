@@ -1,0 +1,41 @@
+port: 8112
+version: some-docker-tag
+
+reqGuidHeader: 'request-id'
+defaultLimit: 100
+
+logSettings:
+  level: 'debug'
+  format: 1 # 1 - simple, 2 - json
+  colorize: true
+
+dbSettings:
+  notEnabled: true
+  host: ''
+  user: ''
+  password: ''
+  port: ''
+  connectionLimit: 100
+
+users:
+  - username: "john.doe"
+    password: ""
+  - username: "julia.simpson"
+    password: ""  
+  - username: "michael.robirtson"
+    password: ""        
+  - username: "clara.edington"
+    password: ""  
+  - username: "james.weel"
+    password: "" 
+
+relationships:
+
+resources:
+  -    
+    name: 'sessions'
+    prefix: 'sessions' 
+    methods: [ 'GET', 'POST', 'PUT', 'DELETE' ]
+    tables:
+      mainTable: ''
+      actionTable: '' 

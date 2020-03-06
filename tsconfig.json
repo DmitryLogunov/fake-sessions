@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "allowJs": false,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "target": "es2017",
+    "lib": [
+      "es2017"
+    ],
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        "node_modules/*"
+      ]
+    },
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/core/types"
+  ],
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "src/**/*",
+    "src/**/*.json",
+    "node_modules/base-template-service/**/*"
+  ]
+}

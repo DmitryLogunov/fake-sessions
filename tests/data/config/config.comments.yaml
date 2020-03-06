@@ -1,0 +1,33 @@
+port: 8111
+
+reqGuidHeader: 'request-id'
+defaultLimit: 100
+
+logSettings:
+  level: 'debug'
+  format: 2 # 1 - simple, 2 - json
+  colorize: true
+
+dbSettings:
+  host: '127.0.0.1'
+  user: ''
+  password: ''
+  port: '3306'
+  connectionLimit: 100
+
+relationships:
+  -
+    resource:  "comments"
+    links:
+      -
+        name: "dictionaries"
+        table: 'dictionaries'
+
+resources:
+  -    
+    name: 'comments'
+    prefix: 'comments' 
+    methods: [ 'GET', 'POST', 'PUT', 'DELETE' ]
+    tables:
+      mainTable: 'comments'
+      actionTable: 'comments' 

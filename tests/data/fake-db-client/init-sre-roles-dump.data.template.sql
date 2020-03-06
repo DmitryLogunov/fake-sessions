@@ -1,0 +1,2 @@
+INSERT INTO `roles` ( `id`, `key`,  `title`, `description`,  `created_at`, `created_by`,  `source_id`, `source_table`, `updated_at`, `updated_by`) 
+VALUES ( NULL, '{{key}}', '{{title}}', '{{description}}',  '2019-06-04 14:00:00', '12',  '{{source_id}}', 'rccmrdb.permission',  '2019-06-04 14:00:00', '12')       

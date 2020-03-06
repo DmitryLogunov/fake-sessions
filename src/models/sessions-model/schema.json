@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$comment": "JSON Schema for roles table",
+  "$id": "sessions",
+  "title": "sessions",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [ ],
+  "attributes": [
+    "login"
+  ],
+  "join_fields": [],
+  "relationships": { },
+  "filter": { },
+  "properties": {
+    "id": {
+      "$comment": "primary key",
+      "type": "string",
+      "primary": true,
+      "alias": {
+        "fieldName": "id"
+      },
+      "pattern": "^[\\d]+$"
+    },
+    "login": {
+      "type": "string",
+      "alias": {
+        "fieldName": "login"
+      }
+    }
+  }
+}
+
